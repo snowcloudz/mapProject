@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+  <title>Builder Services</title>
+    <style>
+      html, body, #map_canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7DpkaNByb5m6sMU5kQRh6oaZZscOSS_U&sensor=false">
+    </script>
+    <script>
+
+var map;
+var north_central = new google.maps.LatLng(28.90085654466369, -81.26510944366454)
+var brickell = new google.maps.LatLng(25.75928682761216, -80.19411070000001)
+var corporate = new google.maps.LatLng(28.543706, -81.373624)
+var src = 'http://www.u360media.com/map/rtcdb8.kml';
+var remax_type = 'RTC'
+var mapstyle = [
+		{
+      stylers: [
+        { hue: '#0033FF' },
+        { visibility: 'simplified' },
+        { gamma: 0.5 },
+        { weight: 0.5 }
+      ]
+    },
+    {
+      elementType: 'labels',
+      stylers: [
+        { visibility: 'on' }
+      ]
+    },
+    {
+      featureType: 'water',
+      stylers: [
+        { color: '' }
+      ]
+    }
+  ];
+
+function HomeNorthCentralControl(controlDiv, map) {
+
+  controlDiv.style.padding = '10px';
+
+  // Set CSS for the control border
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Downtown Orlando Condos';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '20px';
+  controlText.style.paddingRight = '20px';
+  controlText.innerHTML = '<b>North Central</b>';
+  controlUI.appendChild(controlText);
+
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(north_central)
+    map.setZoom(12)
+  });
+
+}
+
+function HomeOrlandoControl(controlDiv, map) {
+
+  controlDiv.style.padding = '5px';
+
+  // Set CSS for the control border
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'View Greater Orlando';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '20px';
+  controlText.style.paddingRight = '20px';
+  controlText.innerHTML = '<b>Greater Orlando</b>';
+  controlUI.appendChild(controlText);
+
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(corporate)
+    map.setZoom(11)
+  });
+
+}
+
+function HomeBricklleNControl(controlDiv, map) {
+
+  controlDiv.style.padding = '5px';
+
+  // Set CSS for the control border
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'View Brickell';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '20px';
+  controlText.style.paddingRight = '20px';
+  controlText.innerHTML = '<b>Brickell North</b>';
+  controlUI.appendChild(controlText);
+
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(brickell)
+    map.setZoom(13)
+  });
+
+}
+
+
+var mapOptions = {
+    zoom: 10,
+    center: corporate,
+    mapTypeId: remax_type, 
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.BOTTOM_CENTER
+    },    
+    panControl: true,
+    panControlOptions: {
+        position: google.maps.ControlPosition.TOP_LEFT
+    },
+
+  };
+
+function initialize() {
+
+  var mapDiv = document.getElementById('map_canvas')
+
+var styledMapOptions = {
+	name: 'RTC'
+
+};
+
+map = new google.maps.Map(mapDiv, mapOptions);
+
+  var homeControlDiv = document.createElement('div');
+  var homeControl = new HomeNorthCentralControl(homeControlDiv, map);
+  var homeControl = new HomeOrlandoControl(homeControlDiv, map);
+  var homeControl = new HomeBricklleNControl(homeControlDiv, map);
+
+  homeControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+
+  var customMapType = new google.maps.StyledMapType(mapstyle, styledMapOptions);
+  
+  map.mapTypes.set(remax_type, customMapType);
+
+  loadKmlLayer(src, map);
+}
+
+function loadKmlLayer(src, map) {
+  var kmlLayer = new google.maps.KmlLayer({
+    url: 'http://www.u360media.com/map/rtcdb8.kml',
+    suppressInfoWindows: false,
+    preserveViewport: true,
+    map: map
+  });
+
+  google.maps.event.addListener(kmlLayer, 'click', function(kmlEvent) {
+    var text = kmlEvent.featureData.description;
+    showInContentWindow(text);
+  });
+
+  function showInContentWindow(text) {
+    var sidediv = document.getElementById('content-window');
+    sidediv.innerHTML = text;
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:IsMyDocuments msdt:dt="string">1</mso:IsMyDocuments>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+ 	<body>
+    	<div id="map_canvas" style="width:85%; height:100%; float:left"></div>
+    <div id="content-window" style="width:15%; height:100%; float:left"></div>
+  	</body>
+</html>

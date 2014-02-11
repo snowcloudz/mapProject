@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Style id="housing_data">
+      <BalloonStyle>
+            <text>
+              <![CDATA[
+                <b>$[name]</b><br>
+                <b>$[address]</b><br>
+                <b>$[contact]</b><br>
+                <b>Type: $[type]</b><br>
+                <b>Price: $[price]</b><br>
+                <b>Commission: $[commission]</b><br>
+              ]]>
+            </text>
+          </BalloonStyle>
+      <IconStyle>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png
+          </href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>The Waverly</name>
+      <styleUrl>#housing_data</styleUrl>
+      <description>
+          The Decription of The Waverly on Lake Eola in Downtown Orlando Florida would be placed here.
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>The Waverly</value>
+            </Data>
+            <Data name="address">
+              <value>310 E. Central Blvd. Orlando, FL 32801</value>
+            </Data>
+            <Data name="contact">
+              <value></value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>$1,100 - $2,300</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>-81.373788,28.542191,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>The Paramount</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>The Paramount on Lake Eola</value>
+            </Data>
+            <Data name="address">
+              <value>415 E. Pine St. Orlando, FL 32801</value>
+            </Data>
+            <Data name="contact">
+              <value></value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>$1,100 - $2,300</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.372320,28.541736,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>The Vue</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>The VUE at Lake Eola</value>
+            </Data>
+            <Data name="address">
+              <value>150 E Robinson St, Orlando, Florida 32801</value>
+            </Data>
+            <Data name="contact">
+              <value></value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>$1,100 - $2,300</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.376385,28.545121,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Post Parks</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Post Parkside</value>
+            </Data>
+            <Data name="address">
+              <value>431 E Central Blvd, Orlando FL</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 849-6330</value>
+            </Data>
+            <Data name="type">
+              <value>Apartments</value>
+            </Data>
+            <Data name="price">
+              <value></value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.372005,28.542587,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Sanctuary</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Sanctuary</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 839-4700</value>
+            </Data>
+            <Data name="address">
+              <value>100 S. Eola Dr, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.370105,28.54107,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>101 Eola</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>101 Eola</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 425-0101</value>
+            </Data>
+            <Data name="address">
+              <value>101 S Eola Dr, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.369542,28.540928,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Aspire</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Aspire</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 770-0111</value>
+            </Data>
+            <Data name="address">
+              <value>111 E Washington St, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.377106,28.543863,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Solaire</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Solaire</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 373-2494</value>
+            </Data>
+            <Data name="address">
+              <value>155 S Court Ave, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condo/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.377739,28.540984,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>55 West</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>55 West</value>
+            </Data>
+            <Data name="contact">
+              <value>(866) 585-9324</value>
+            </Data>
+            <Data name="address">
+              <value>55 W Church St, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>$1058 - $2399</value>
+            </Data>
+            <Data name="commission">
+              <value>1/2 Month</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.380158,28.540038,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Star Tower</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Star Tower</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 648-7068</value>
+            </Data>
+            <Data name="address">
+              <value>260 S Osceola Ave, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.371674,28.539507,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>The Grande</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>The Grande</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 835-1359</value>
+            </Data>
+            <Data name="address">
+              <value>202 E South St, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.374819,28.537681,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Uptown</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Uptown</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 426-8285</value>
+            </Data>
+            <Data name="address">
+              <value>911 N Orange Ave, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.378718,28.557254,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Steel House</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Steel House</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 317-8335</value>
+            </Data>
+            <Data name="address">
+              <value>760 N Orange Ave, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.379558,28.554222,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Camden Court</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Camden Court</value>
+            </Data>
+            <Data name="contact">
+              <value>(866) 636-4715</value>
+            </Data>
+            <Data name="address">
+              <value>668 N Orange Ave, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.379291,28.552328,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>Sky House</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Sky House</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 650-9005</value>
+            </Data>
+            <Data name="address">
+              <value>355 N Magnolia Ave, Orlando FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.377492,28.547355,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <name>The Lofts at Sodo</name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>The Lofts at Sodo</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 996-7636</value>
+            </Data>
+            <Data name="address">
+              <value>100 West Grant Street, Orlando, FL</value>
+            </Data>
+            <Data name="type">
+              <value>Condos/Rentals</value>
+            </Data>
+            <Data name="price">
+              <value>-</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.379031,28.516553,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <Name>Toscana</Name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Toscana</value>
+            </Data>
+            <Data name="contact">
+              <value>(386) 517-6864</value>
+            </Data>
+            <Data name="address">
+              <value>26 New Water Oak Drive Palm Coast, FL</value>
+            </Data>
+            <Data name="type">
+              <value>SFH</value>
+            </Data>
+            <Data name="price">
+              <value>$359,000 - $899,900</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+            <Data name="builder">
+              <value>ABD Development</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.186578,29.506809,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <Name>Addison Place</Name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Addison Place</value>
+            </Data>
+            <Data name="contact">
+              <value>(407) 756-0452</value>
+            </Data>
+            <Data name="address">
+              <value>2324 Wolf Ridge Lane, Mount Dora, FL</value>
+            </Data>
+            <Data name="type">
+              <value>SFH</value>
+            </Data>
+            <Data name="price">
+              <value>$100,000 + </value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+            <Data name="builder">
+              <value>Adams Homes</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.619785,28.815694,0</coordinates>
+          </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <Name>Tuscan Cove</Name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Tuscan Cove</value>
+            </Data>
+            <Data name="contact">
+              <value>(352) 742-0121</value>
+            </Data>
+            <Data name="address">
+              <value>2232 Bexley Dr. Tavares, FL</value>
+            </Data>
+            <Data name="type">
+              <value>SFH</value>
+            </Data>
+            <Data name="price">
+              <value>$139,000 + </value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+            <Data name="builder">
+              <value>Adams Homes</value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates>-81.702315,28.805795,0</coordinates>
+          </Point>
+    </Placemark>
+     </Placemark>
+    <Placemark>
+      <styleUrl>#housing_data</styleUrl>
+      <Name>Quantum on the Bay</Name>
+      <description>
+          <![CDATA[<a href="#" onclick="alert(\'Running some JavaScript!\');"> Alert! </a><br>]]>
+      </description>
+      <ExtendedData>
+            <Data name="name">
+              <value>Quantum on the Bay</value>
+            </Data>
+            <Data name="contact">
+              <value>(305) 503-6183</value>
+            </Data>
+            <Data name="address">
+              <value>1900 N Bayshore Dr, Miami, FL 33132</value>
+            </Data>
+            <Data name="type">
+              <value></value>
+            </Data>
+            <Data name="price">
+              <value>$239,900 - $1,150,000</value>
+            </Data>
+            <Data name="commission">
+              <value>-</value>
+            </Data>
+            <Data name="builder">
+              <value></value>
+            </Data>
+          </ExtendedData>
+          <Point>
+            <coordinates></coordinates>
+          </Point>
+    </Placemark>
+  </Document>
+</kml>
